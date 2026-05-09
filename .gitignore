@@ -1,0 +1,17 @@
+dist/
+web-ext-artifacts/
+node_modules/
+*.zip
+*.xpi
+.codex
+
+# Vim
+.*.sw?
+*.sw?
+Session.vim
+.netrwhist
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+npm-debug.log*
