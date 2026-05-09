@@ -1,0 +1,11 @@
+Gmail inboxes fill up quickly, and adding `in:inbox` to a search is a simple way to focus on messages that are still in the inbox. Doing that manually every time gets old.
+
+When triggered, this extension appends `in:inbox` to the current query and runs the search automatically.
+
+The screenshots show the added inbox-search button in Gmail’s main search bar and an example of the resulting inbox-only search.
+
+Features:
+- Adds a search-in-inbox button next to Gmail’s main search field
+- Adds a `Ctrl+Enter` shortcut (`Cmd+Enter` on macOS)
+- Works with your existing Gmail search terms
+- Avoids adding `in:inbox` twice if it is already present

@@ -1,0 +1,46 @@
+name: Build extensions
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install web-ext
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+          npm install --global web-ext
+
+      - name: Validate JavaScript
+        run: node -c content.js
+
+      - name: Validate manifests
+        run: node -e "JSON.parse(require('fs').readFileSync('manifest.source.json', 'utf8'))"
+
+      - name: Build packages
+        run: ./build.sh
+
+      - name: Lint Firefox package
+        run: NO_UPDATE_NOTIFIER=1 web-ext lint --source-dir dist/gmail-search-in-inbox-firefox-v*.zip
+
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: gmail-search-in-inbox-packages
+          path: dist/*.zip
