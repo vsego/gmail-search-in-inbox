@@ -6,6 +6,9 @@ Firefox and Chromium extension that adds a search-in-inbox button to Gmail's sea
 
 Shortcut: focus Gmail's search box and press `Ctrl+Enter`. On macOS, `Cmd+Enter` also works.
 
+Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/gmail-search-in-inbox/
+Chrome Web Store: https://chromewebstore.google.com/detail/gmail-search-in-inbox/ocfhcfembeelbebmfodaipfdejcgoedl
+
 ## Install in Firefox
 
 1. Download the Firefox package from the latest GitHub Actions build or release.

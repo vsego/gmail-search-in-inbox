@@ -44,4 +44,6 @@ git push origin v<version>
 ## After publication
 
 1. Add the Firefox and Chrome store URLs to [README.md](README.md).
-2. Install the published versions locally from the store pages.
+2. Firefox URL: https://addons.mozilla.org/en-US/firefox/addon/gmail-search-in-inbox/
+3. Chrome URL: https://chromewebstore.google.com/detail/gmail-search-in-inbox/ocfhcfembeelbebmfodaipfdejcgoedl
+4. Install the published versions locally from the store pages.
