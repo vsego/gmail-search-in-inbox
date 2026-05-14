@@ -9,5 +9,5 @@ Features:
 - Avoids adding `in:inbox` twice if it is already present
 
 Screenshot captions:
-1. Adds an inbox-only search button directly to Gmail’s search bar
-2. Runs the current search as an inbox-only query automatically
+1. Adds an inbox-only search button next to Gmail’s search bar
+2. Runs the current search with `in:inbox` added automatically
